@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple App</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+ 
+    <link rel="stylesheet" href="css/s.css">
+ </head>
+    <body>
+
+
+<div id="wrapper">
+
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                <h3>Select a Category!</h3>
+                    <!-- <a href="#">Select a Category</a> -->
+                </li>
+                <li>
+                    <select class="category-items" data-bind="options: OptionsForCatg, value: selectedCategory"></select>
+                </li>
+<!--                 <ul data-bind="foreach: model">
+ -->                <ul data-bind="foreach: locationList">
+                  <li class= "list-items" data-bind="text: $data.name, click: $parent.openWindow, visible: isVisible">
+                  </li>
+
+                </ul>
+            </ul>
+        </div>
+    
+                 <div id = "map"></div>
+    </div>
+          
+
+
+     <script src="knockout-3.4.2.js"></script>
+    <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script  async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2sMj0YVSfk5dwx02hLBaAfEdWeojdwho&callback=initMap" onerror="mapAPTError()"
+    ></script>
+  </body>
+</html>
